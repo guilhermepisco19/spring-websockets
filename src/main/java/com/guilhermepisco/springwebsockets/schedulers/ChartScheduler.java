@@ -15,6 +15,6 @@ public class ChartScheduler {
 	
 	@Scheduled(fixedDelay = 3000)
 	public void sendRandomValue() {
-		smt.convertAndSend("/topic/greetings", Math.random());
+		smt.convertAndSend("/topic/greetings", Math.random()*10);
 	}
 }
